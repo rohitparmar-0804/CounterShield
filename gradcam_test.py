@@ -2,7 +2,6 @@ import sys
 import tensorflow as tf
 import numpy as np
 import cv2
-import matplotlib.pyplot as plt
 
 from PIL import Image
 
@@ -185,31 +184,13 @@ print("Confidence: {:.2f}%".format(
 print("Grad-CAM layer:", gradcam_layer.name)
 
 
-plt.figure(figsize=(12, 5))
-
-plt.subplot(1, 2, 1)
-plt.imshow(original_array)
-plt.title("Original Image")
-plt.axis("off")
-
-plt.subplot(1, 2, 2)
-plt.imshow(overlay)
-plt.title(
-    "Grad-CAM: " + predicted_class
-)
-plt.axis("off")
-
-plt.tight_layout()
-
 OUTPUT_PATH = "model/efficientnetb0/gradcam_result.png"
 
-plt.savefig(
+# Save Grad-CAM overlay directly without Matplotlib
+cv2.imwrite(
     OUTPUT_PATH,
-    dpi=200,
-    bbox_inches="tight"
+    cv2.cvtColor(overlay, cv2.COLOR_RGB2BGR)
 )
-
-plt.show()
 
 print("Grad-CAM saved to:", OUTPUT_PATH)
 
