@@ -3,3 +3,4 @@ tensorflow==2.21.0
 opencv-python-headless
 pillow
 numpy
+matplotlib
