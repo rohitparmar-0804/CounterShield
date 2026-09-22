@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.pyc
+
+CounterShield_Final_v3/
+
+model/custom_cnn/
+model/mobilenetv2/
+
+model/efficientnetb0/*.png
+model/efficientnetb0/*_evaluation.json
+model/efficientnetb0/*_history.json
+model/efficientnetb0/*_loss.json
+model/efficientnetb0/model_comparison.json
+model/efficientnetb0/prediction_result.json
+model/efficientnetb0/*.keras
+!model/efficientnetb0/efficientnetb0_finetuned.keras

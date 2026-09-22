@@ -1,0 +1,64 @@
+{
+    "dataset": {
+        "total_images": 318,
+        "training_images": 223,
+        "validation_images": 47,
+        "test_images": 48
+    },
+
+    "models": {
+        "Custom CNN": {
+            "test_accuracy": 0.5833,
+            "test_accuracy_percent": 58.33,
+            "test_loss": 0.6697,
+            "genuine_precision": 0.5556,
+            "genuine_recall": 0.8333,
+            "genuine_f1": 0.6667,
+            "counterfeit_precision": 0.6667,
+            "counterfeit_recall": 0.3333,
+            "counterfeit_f1": 0.4444,
+            "macro_f1": 0.5556,
+            "weighted_f1": 0.5556,
+            "confusion_matrix": [
+                [20, 4],
+                [16, 8]
+            ]
+        },
+
+        "MobileNetV2": {
+            "test_accuracy": 0.6250,
+            "test_accuracy_percent": 62.50,
+            "test_loss": 0.6080,
+            "genuine_precision": 0.6154,
+            "genuine_recall": 0.6667,
+            "genuine_f1": 0.6400,
+            "counterfeit_precision": 0.6364,
+            "counterfeit_recall": 0.5833,
+            "counterfeit_f1": 0.6087,
+            "macro_f1": 0.6243,
+            "weighted_f1": 0.6243,
+            "confusion_matrix": [
+                [16, 8],
+                [10, 14]
+            ]
+        },
+
+        "EfficientNetB0": {
+            "test_accuracy": 0.8333,
+            "test_accuracy_percent": 83.33,
+            "test_loss": 0.5798,
+            "genuine_precision": 0.9000,
+            "genuine_recall": 0.7500,
+            "genuine_f1": 0.8182,
+            "counterfeit_precision": 0.7857,
+            "counterfeit_recall": 0.9167,
+            "counterfeit_f1": 0.8462,
+            "macro_f1": 0.8322,
+            "weighted_f1": 0.8322,
+            "confusion_matrix": [
+                [18, 6],
+                [2, 22]
+            ]
+        }
+    }
+}
